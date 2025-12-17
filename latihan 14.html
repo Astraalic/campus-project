@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Layout</title>
+<style>
+* {
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+body{
+margin: 0;
+padding: 0;
+}
+/* HEADER */
+.header {
+padding: 30px;
+text-align: center;
+background:pink;
+}
+.header h1 {
+font-size: 50px;
+margin: 0;
+}
+/* NAVBAR */
+.navbar{
+overflow: hidden;
+background:#333;
+}
+.navbar a{
+float: left;
+display: block;
+color:white;
+padding: 14px 16px;
+text-decoration: none;
+}
+.navbar a.right{
+float: right;
+}
+.navbar a:hover {
+background:#ddd;
+color:black;
+}
+/* MAIN LAYOUT */
+.row{
+display: flex;
+flex-wrap: wrap;
+padding: 10px;
+}
+/* LEFT COLUMN*/
+left-column {
+flex:70%;
+padding: 10px;
+}
+RIGHT COLUMN */
+.right-column {
+flex: 30%;
+padding: 10px;
+}
+/* CARD BOX */
+.card {
+background:
+white;
+padding: 20px;
+margin-bottom: 20px;
+border: 1px solid #ddd;
+}
+/* FAKE IMAGE */
+.fakeimg {
+background:
+#aaa;
+width: 100%;
+padding: 20px;
+text-align: center;
+color:
+white;
+}
+.fakeimg.big {
+height: 200px;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width:800px){
+.left-column,
+.right-column {
+flex: 100%;
+}
+.navbar a.right {
+float: left;
+}
+}
+
+/*FOOTER */ 
+.footer {
+background:
+#dcdcdc;
+text-align: center;
+padding:40px;
+font-size: 20px;
+margin-top: 20px;
+}
+/*RESPONSIVE */
+@media (max-width: 800px){
+.left-column,
+.right-column {
+flex: 100%;
+}
+.navbar a.right {
+float: left;
+}
+}
+</style>
+</head>
+<body>
+
+    <!-- HEADER -->
+<header class="header">
+<h1>My Website</h1>
+<p>Resize the browser window to see the effect.</p>
+</header>
+<!-- NAVIGATION -->
+<nav class="navbar">
+<a href="https://discord.com/">
+<img src="discordlogo.jpg" alt="Discord" width="25" height="25" style="vertical-align: middle;">
+<a href="https://wa.me/+6285889426015">
+<img src="download.jpeg" alt="whatsapp" width="25" height="25" style="vertical-align: middle;">
+</a>
+<a href="#">Link</a>
+<a href="#"class="right">Link</a>
+</nav>
+<!-- MAIN CONTENT -->
+<div class="row">
+<!-- LEFT COLUMN -->
+<div class="left-column">
+<div class="card">
+<h2>TITLE HEADING</h2>
+<h5>Title description, Dec 7, 2017</h5>
+<div class="fakeimg big">Image</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+Asperiores, laborum!</p>
+</div>
+<div class="card">
+<h2>Another Title</h2>
+<h5>Title description, Sep 2, 2017</h5>
+<div class="fakeimg big">Image</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+</div>
+<!-- RIGHT COLUMN-->
+<div class="right-column">
+<div class="card">
+<h3>Follow Me</h3>
+<p>Some text..</p>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<h3>Footer</h3>
+</footer>
+</body>
+</html>
